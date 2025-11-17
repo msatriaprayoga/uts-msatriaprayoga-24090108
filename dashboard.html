@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="hamburger" id="hamburger">☰</div>
+
+    <!-- SIDEBAR KECIL -->
+    <aside class="sidebar">
+        <div class="sidebar-menu">
+            <div class="icon-item"><img src="img/home.png" id="icon-home" onclick="goHome()"></div>
+            <div class="icon-item"><img src="img/menu.png"></div>
+            <div class="icon-item"><img src="img/money-bag.png"></div>
+            <div class="icon-item"><img src="img/bar-chart.png"></div>
+            <div class="icon-item"><img src="img/setting.png"></div>
+        </div>
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <h1 class="page-title">Dashboard</h1>
+
+        <!-- KOTAK UTAMA -->
+        <div class="main-box">
+
+            <!-- CARDS -->
+            <div class="cards">
+
+                <div class="card" id="card-product">
+                    <img src="img/bag.png" class="card-icon">
+                    <h3>Total Product</h3>
+                    <p id="totalProduct">0</p>
+                </div>
+
+                <div class="card">
+                    <img src="img/bag.png" class="card-icon">
+                    <h4>Total Sales</h4>
+                    <p id="totalSales">0</p>
+                </div>
+
+                <div class="card">
+                    <img src="img/dollar.png" class="card-icon">
+                    <h4>Total Revenue</h4>
+                    <p id="totalRevenue">0</p>
+                </div>
+
+            </div>
+
+            <!-- BOX BESAR -->
+            <div class="big-box"></div>
+            <button class="view-product-btn" onclick="window.location.href='products.html'">
+                Lihat Produk
+            </button>
+        </div>
+
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

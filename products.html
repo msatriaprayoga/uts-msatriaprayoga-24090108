@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Table</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="hamburger" id="hamburger">☰</div>
+
+    <!-- SIDEBAR KECIL -->
+    <aside class="sidebar">
+        <div class="sidebar-menu">
+
+            <div class="icon-item"><img src="img/home.png" id="icon-home" onclick="goHome()"></div>
+
+            <div class="icon-item"><img src="img/menu.png"></div>
+            <div class="icon-item"><img src="img/money-bag.png"></div>
+            <div class="icon-item"><img src="img/bar-chart.png"></div>
+            <div class="icon-item"><img src="img/setting.png"></div>
+        </div>
+    </aside>
+    
+    <div class="product-page">
+
+    <h2 class="product-title">List Data Product</h2>
+
+    <div class="product-box">
+        <table class="product-table">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Nama Produk</th>
+                    <th>Harga</th>
+                    <th>Stok</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+
+            <tbody id="productTableBody">
+                <!-- Data produk akan diisi di sini oleh script.js -->
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

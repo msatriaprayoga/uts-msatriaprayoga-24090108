@@ -1,0 +1,481 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.cointainer {
+    display: flex;
+}
+
+/* ===== SIDEBAR KECIL ===== */
+.sidebar {
+    width: 70px;
+    height: 100vh;
+    background: linear-gradient(to bottom, #d8bbbb, #f4f0f0);
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    border-radius: 0 15px 15px 0;
+    align-items: center;
+    z-index: 9999;
+}
+
+.sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+
+.icon-item img {
+    width: 35px;
+    opacity: 0.9;
+}
+
+/* ===== MAIN CONTENT ===== */
+.main-content {
+    margin-left: 90px; /* agar nempel seperti gambar */
+    padding-top: 40px;
+}
+
+.page-title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+/* ===== KOTAK UTAMA ===== */
+.main-box {
+    background: white;
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+    width: 1150px;     /* biar rapi seperti gambar */
+}
+
+/* ===== CARDS ===== */
+.cards {
+    display: flex;
+    gap: 25px;              /* Jarak antar card */
+    margin-bottom: 20px;    /* Jarak ke box besar */
+    justify-content: space-between; /* Rapi kiri - tengah - kanan */
+
+}
+
+.card {
+    flex: 1;                     /* Agar semua card punya lebar sama */
+    max-width: 280px;            /* Biar tidak terlalu lebar */
+    height: 150px;
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.12);
+    padding: 20px;
+    text-align: center;
+    transition: 0.2s;
+}
+
+/* Hover biar lebih modern */
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 5px 14px rgba(0,0,0,0.18);
+}
+
+.card-icon {
+    width: 30px;
+    margin-bottom: 10px;
+}
+
+.value {
+    margin-top: 10px;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+/* ===== BIG BOX ===== */
+.big-box {
+    margin-top: 25px;
+    width: 100%;
+    height: 200px;
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.10);
+}
+
+.view-product-btn {
+    margin-top: 15px;
+    display: block;
+    padding: 12px 20px;
+    background: #4A8BFF;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 160px;
+    text-align: center;
+    transition: 0.3s ease;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.view-product-btn:hover {
+    background: #356ed7;
+    transform: translateY(-2px);
+}
+
+
+/* ===== HAMBURGER BUTTON ===== */
+.hamburger {
+    display: none;
+    font-size: 32px;
+    padding: 15px;
+    cursor: pointer;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 9999;
+}
+
+
+/* ========== RESPONSIVE MODE ========== */
+@media (max-width: 850px) {
+
+    /* Tampilkan hamburger */
+    .hamburger {
+        display: block;
+    }
+
+    /* Sidebar disembunyikan awal */
+    .sidebar {
+        transform: translateX(-120px);
+        transition: 0.3s ease;
+    }
+
+    /* Sidebar muncul saat class .show aktif */
+    .sidebar.show {
+        transform: translateX(0);
+    }
+
+    /* Main content agar tidak terlalu ke kanan */
+    .main-content {
+        margin-left: 50px;
+        padding-top: 100px;
+        align-items: center;
+    }
+
+    /* Cards turun ke bawah */
+    .cards {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .card {
+        max-width: 100%;
+        height: auto;
+        padding: 50px;
+        align-items: center;
+    }
+
+    /* Big box juga menyesuaikan */
+    .big-box {
+        height: 100%;
+        padding: 50px;
+        margin: auto;
+    }
+
+    .view-product-btn {
+        height: 100%;
+        margin: 15px auto 0 auto;
+        padding: 20px;
+        align-items: center;
+    }
+}
+
+/* ===== AREA KHUSUS HALAMAN PRODUK ===== */
+.product-page {
+    margin-left: 90px; 
+    padding: 40px;
+}
+
+/* Judul */
+.product-title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+/* Wrapper Box Putih */
+.product-box {
+    background: white;
+    border-radius: 20px;
+    padding: 50px;
+    box-shadow: 0 5px 13px rgba(0,0,0,0.12);
+    max-width: 1000px;     /* biar rapi seperti gambar */
+    margin: 70px 50px 100px 50px;          /* center ke tengah */
+}
+
+/* Tabel */
+.product-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 18px;
+}
+
+.product-table th {
+    text-align: left;
+    padding: 15px 10px;
+    font-weight: bold;
+}
+
+.product-table td {
+    padding: 15px 10px;
+    border-top: 1px solid #ddd;
+}
+
+.product-table tr:last-child td {
+    border-bottom: 1px solid #ddd;
+}
+
+/* Icon edit & delete */
+.table-icon {
+    width: 20px;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.table-icon:hover {
+    opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 850px) {
+    .product-page {
+        margin-left: 15px;
+        padding: 25px;
+    }
+
+    .product-box {
+        padding: 20px;
+        margin: 10px;
+    }
+
+    .product-title {
+        font-size: 26px;
+        text-align: center;
+    }
+
+    .product-table th, .product-table td {
+        font-size: 16px;
+        padding: 10px 5px;
+    }
+
+    .product-table {
+        font-size: 14px;
+    }
+}
+
+/* ICON EDIT & DELETE */
+.product-table .action-icon {
+    width: 22px;
+    cursor: pointer;
+    margin-right: 10px;
+    opacity: .8;
+    transition: .2s;
+}
+
+.product-table .action-icon:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+#icon-home {
+    cursor: pointer;
+}
+
+#card-product {
+    cursor: pointer;
+}
+
+/* ====== LOGIN PAGE ONLY ====== */
+
+.login-body {
+    background: #fff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial;
+}
+
+.login-container {
+    width: 90%;
+    max-width: 1150px;
+    display: flex;
+    gap: 40px;
+}
+
+.input-group {
+    position: relative;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 15px 12px 45px; /* ruang kiri untuk icon */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+    transition: .3s;
+}
+
+.input-group input:focus {
+    border-color: #4A67FF;
+    box-shadow: 0 0 3px rgba(74, 103, 255, 0.4);
+}
+
+.input-icon {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    opacity: .7;
+}
+
+.input-icon img {
+    width: 100%; 
+}
+
+
+.login-left {
+    flex: 1;
+    text-align: center;
+}
+
+.login-left img {
+    width: 90%;
+    max-width: 480px;
+}
+
+.login-right {
+    flex: 1;
+}
+
+.login-title {
+    font-size: 36px;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.login-input-box {
+    margin-bottom: 20px;
+}
+
+.login-input-box input {
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #aaa;
+}
+
+.login-forgot {
+    text-align: right;
+    font-size: 14px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 15px;
+    background: #000;
+    color: #fff;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.login-or {
+    display: flex;
+    align-items: center;
+    margin: 25px 0;
+    gap: 10px;
+}
+
+.login-or div {
+    flex: 1;
+    height: 1px;
+    background: #ccc;
+}
+
+.login-social {
+    display: flex;
+    gap: 20px;
+}
+
+.login-social-btn {
+    flex: 1;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #555;
+    text-align: center;
+    cursor: pointer;
+}
+
+.login-signup {
+    text-align: center;
+    margin-top: 20px;
+}
+
+@media (max-width: 900px) {
+    .login-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .login-social {
+        flex-direction: column;
+    }
+}
+
+/* === TOMBOL GOOGLE & FACEBOOK === */
+.social-buttons {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.social-buttons button {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #bbb;
+    background: #fff;
+    border-radius: 10px;
+
+    font-size: 15px;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.social-buttons button:hover {
+    background: #f5f5f5;
+}
+
+/* icon google & facebook */
+.icon {
+    width: 18px;
+    height: 18px;
+}
