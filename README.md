@@ -55,7 +55,7 @@ https://github.com/msatriaprayoga/uts-msatriaprayoga-24090108
 ---
 
 ## Link GitHub Pages
-
+https://msatriaprayoga.github.io/uts-msatriaprayoga-24090108/
 
 ---
 
